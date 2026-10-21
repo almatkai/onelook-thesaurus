@@ -3,7 +3,7 @@
   "name": "onelook-thesaurus",
   "title": "OneLook Thesaurus",
   "description": "A powerful English thesaurus and brainstorming tool that lets you describe what you're looking for in plain terms.",
-  "icon": "command-icon.png",
+  "icon": "assets/command-icon.png",
   "author": "almatkai",
   "categories": [
     "Productivity"

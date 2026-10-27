@@ -1,0 +1,32 @@
+OneLook Thesaurus standalone Rust development port
+Own source: https://github.com/almatkai/onelook-thesaurus
+Source baseline: 3557a2ccd50cd3b4c3153afed9e4ec8c78106782
+Original command and original icon: Raycast extensions,
+extensions/onelook-thesaurus at 6734d85992290066fd31a7f5bee3cca3d3545a1a.
+The original icon is copied byte for byte, never regenerated or recompressed.
+
+The own repository's original LICENSE contains literal backslash-n separators;
+the v2 LICENSE decodes those separators only. Its exact original is retained in
+notices/own-original-LICENSE. The upstream Raycast grant is retained separately.
+
+Independent SDK: tezbar-extension-sdk 0.1.1, Apache-2.0,
+https://github.com/almatkai/tezbar-extension-sdk-rust at
+e955911f0bf5b558f9d3eb5183df0adc95c22af2. See SDK grant and NOTICE.
+Pinned host test fixtures (not linked into the extension): Tezbar at
+ea100cee3f69711de12485ba061950c5fc65258f, Apache-2.0.
+
+notices/inventory.json records actual locked dependency license declarations and
+hashes of authentic grant files. Cargo notices include optional/target-specific
+lockfile dependencies; this is an inventory, not a claim all are linked on ARM64.
+r-efi 6.0.0 AUTHORS contains its real MIT/Apache/LGPL grants and copyright list.
+
+QA uses the locked @raycast/utils 2.3.0 source-map closure and metadata from
+@raycast/api 1.104.25. Both original npm tarballs declare MIT and identify Raycast
+Technologies Ltd., but neither supplies LICENSE, COPYING, COPYRIGHT, NOTICE or
+AUTHORS grant text. Their exact package.json metadata is retained; no missing
+copyright permission text has been invented or attributed to those tarballs.
+The Raycast extensions repository grant is not represented as a tarball grant.
+QA npm packages and fixtures are not needed by the production executable.
+
+In the development ZIP, the source notices/ tree is carried under
+resources/notices/ and is covered by the package's closed file hash map.

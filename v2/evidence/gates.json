@@ -1,0 +1,326 @@
+{
+  "gates": [
+    {
+      "name": "source-oracle",
+      "command": [
+        "node",
+        "qa/source-oracle.cjs"
+      ],
+      "toolchain": "stable",
+      "exit": 0,
+      "state": "passed",
+      "logSha256": "1d77e16d26c5384283f854199e0fa7e1e6abef7c33ce2a5825ad2eab6ad53913"
+    },
+    {
+      "name": "renderer-patch",
+      "command": [
+        "python3",
+        "qa/prepare-host-patch.py"
+      ],
+      "toolchain": "stable",
+      "exit": 0,
+      "state": "passed",
+      "logSha256": "bd9a84735a9c9cc108243fbf7a70e20ad2797041d9594d7928ffbc96b1ff06e6"
+    },
+    {
+      "name": "renderer",
+      "command": [
+        "node",
+        "qa/renderer.cjs"
+      ],
+      "toolchain": "stable",
+      "exit": 0,
+      "state": "passed",
+      "logSha256": "dca9d5f1248935a1813cf41109a42f8124cdf16cb8ff51f0d014fc44bb7cfc45"
+    },
+    {
+      "name": "schema",
+      "command": [
+        "node",
+        "qa/schema.cjs"
+      ],
+      "toolchain": "stable",
+      "exit": 0,
+      "state": "passed",
+      "logSha256": "5e7d79890ded308f9e39a7fb98dddc7a06157b168749b73744cdad075d9c080d"
+    },
+    {
+      "name": "fmt-1.85.0",
+      "command": [
+        "cargo",
+        "fmt",
+        "--check"
+      ],
+      "toolchain": "1.85.0",
+      "exit": 0,
+      "state": "passed",
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "tests-1.85.0",
+      "command": [
+        "cargo",
+        "test",
+        "--locked",
+        "--all-targets",
+        "--all-features"
+      ],
+      "toolchain": "1.85.0",
+      "exit": 0,
+      "state": "passed",
+      "logSha256": "cbaa9c85c4c58a34c27bbf17178a9ab7cdaafc265fb95f09ef1a94d69709e1ea"
+    },
+    {
+      "name": "clippy-1.85.0",
+      "command": [
+        "cargo",
+        "clippy",
+        "--locked",
+        "--all-targets",
+        "--all-features",
+        "--",
+        "-D",
+        "warnings"
+      ],
+      "toolchain": "1.85.0",
+      "exit": 0,
+      "state": "passed",
+      "logSha256": "c24111bf2f85f548869ecf8ffbdef0d362a9e4331497e8eadb769d9d12386786"
+    },
+    {
+      "name": "windows-check-1.85.0",
+      "command": [
+        "cargo",
+        "check",
+        "--locked",
+        "--all-targets",
+        "--all-features",
+        "--target",
+        "x86_64-pc-windows-gnu"
+      ],
+      "toolchain": "1.85.0",
+      "exit": 101,
+      "state": "blocked",
+      "logSha256": "3e5d9178d46dd82cb9171ee065b4a519ef689de4bbf3c748357dcf0a4777c37d"
+    },
+    {
+      "name": "windows-clippy-1.85.0",
+      "command": [
+        "cargo",
+        "clippy",
+        "--locked",
+        "--all-targets",
+        "--all-features",
+        "--target",
+        "x86_64-pc-windows-gnu",
+        "--",
+        "-D",
+        "warnings"
+      ],
+      "toolchain": "1.85.0",
+      "exit": 101,
+      "state": "blocked",
+      "logSha256": "f7af02afebf5738e8eef7f27230f18a2c4d4bc68778eb1368dfc56c8eeced243"
+    },
+    {
+      "name": "fmt-stable",
+      "command": [
+        "cargo",
+        "fmt",
+        "--check"
+      ],
+      "toolchain": "stable",
+      "exit": 0,
+      "state": "passed",
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "tests-stable",
+      "command": [
+        "cargo",
+        "test",
+        "--locked",
+        "--all-targets",
+        "--all-features"
+      ],
+      "toolchain": "stable",
+      "exit": 0,
+      "state": "passed",
+      "logSha256": "facda97c781cca65cf0fde66b8275f28826bf9f3df19c51da8fc94ee61c33552"
+    },
+    {
+      "name": "clippy-stable",
+      "command": [
+        "cargo",
+        "clippy",
+        "--locked",
+        "--all-targets",
+        "--all-features",
+        "--",
+        "-D",
+        "warnings"
+      ],
+      "toolchain": "stable",
+      "exit": 0,
+      "state": "passed",
+      "logSha256": "05adc534d66008a19009866b153f47b1da3ad39a181ab5669e9a42dff6479dbb"
+    },
+    {
+      "name": "windows-check-stable",
+      "command": [
+        "cargo",
+        "check",
+        "--locked",
+        "--all-targets",
+        "--all-features",
+        "--target",
+        "x86_64-pc-windows-gnu"
+      ],
+      "toolchain": "stable",
+      "exit": 101,
+      "state": "blocked",
+      "logSha256": "c511115572d3948e5c8d1540dd350903ea4fd17f6e2b61cfc790473598cd38ab"
+    },
+    {
+      "name": "windows-clippy-stable",
+      "command": [
+        "cargo",
+        "clippy",
+        "--locked",
+        "--all-targets",
+        "--all-features",
+        "--target",
+        "x86_64-pc-windows-gnu",
+        "--",
+        "-D",
+        "warnings"
+      ],
+      "toolchain": "stable",
+      "exit": 101,
+      "state": "blocked",
+      "logSha256": "b8207861c8763e5302c89ac3a39fa473584370441f3fb819ec518c1a5658d6c1"
+    },
+    {
+      "name": "qa-build",
+      "command": [
+        "cargo",
+        "build",
+        "--locked",
+        "--bins",
+        "--all-features"
+      ],
+      "toolchain": "1.85.0",
+      "exit": 0,
+      "state": "passed",
+      "logSha256": "99f71393b9903dca098310bb446022a4bdee195ea9996f351a787195555210a6"
+    },
+    {
+      "name": "process",
+      "command": [
+        "python3",
+        "qa/process.py"
+      ],
+      "toolchain": "stable",
+      "exit": 0,
+      "state": "passed",
+      "logSha256": "e56a9a0092bf27eb5e43039dd436e73d8c9675675127f202f939aa8466084c4b"
+    },
+    {
+      "name": "v1-test",
+      "command": [
+        "npm",
+        "test"
+      ],
+      "toolchain": "stable",
+      "exit": 0,
+      "state": "passed",
+      "logSha256": "0438a3fd8009aaa7a7e8e15571a4014df97d4a568ce3b1fcde8d170903c20e4d"
+    },
+    {
+      "name": "v1-typecheck",
+      "command": [
+        "npm",
+        "run",
+        "typecheck"
+      ],
+      "toolchain": "stable",
+      "exit": 0,
+      "state": "passed",
+      "logSha256": "d4e842c73a60f42ad91d9aed307a07040cec638091c3899bdd73827944bd1e48"
+    },
+    {
+      "name": "metadata",
+      "command": [
+        "cargo",
+        "metadata",
+        "--locked",
+        "--format-version",
+        "1"
+      ],
+      "toolchain": "1.85.0",
+      "exit": 0,
+      "state": "passed",
+      "logSha256": "2c21b2a077ce874709577e74b3386c814a7b3983d90d683bbd8c177b4c261d83"
+    },
+    {
+      "name": "notices",
+      "command": [
+        "python3",
+        "qa/notices.py"
+      ],
+      "toolchain": "stable",
+      "exit": 0,
+      "state": "passed",
+      "logSha256": "6ed96723ab75982205ab65b1863d1219c50b4ec7c339932d31df3503892d8944"
+    },
+    {
+      "name": "pin-audit",
+      "command": [
+        "python3",
+        "qa/audit.py"
+      ],
+      "toolchain": "stable",
+      "exit": 0,
+      "state": "passed",
+      "logSha256": "555bd49e91967377f3895efd9a26cad93f0962eb3a0bfb34eacff253eb0a95fc"
+    },
+    {
+      "name": "fresh-source-build",
+      "command": [
+        "cargo",
+        "build",
+        "--locked",
+        "--release",
+        "--bin",
+        "onelook-thesaurus"
+      ],
+      "toolchain": "1.85.0",
+      "exit": 0,
+      "state": "passed",
+      "logSha256": "8cfc048a4f9e3ab9f4c4bbeaf7af9d5cdc5866935e9750f7882a60eb8de2211a"
+    },
+    {
+      "name": "package",
+      "command": [
+        "python3",
+        "qa/package.py",
+        "/Users/almat/Desktop/code/Tezbar APP/rust-extension-ports/onelook-thesaurus/v2/target/final-fresh-1/release/onelook-thesaurus"
+      ],
+      "toolchain": "stable",
+      "exit": 0,
+      "state": "passed",
+      "logSha256": "49800eb155ed2d27d5e50a472453dbb8ec6e5f0fc092c88cee58f1a6c3752549"
+    }
+  ],
+  "passed": 19,
+  "blocked": 4,
+  "failed": 0,
+  "windowsGaps": {
+    "mingwCompiler": null,
+    "dlltool": null,
+    "msvcTargetInstalled": false,
+    "windowsRuntimeAndGUI": "not-run"
+  },
+  "hostGUI": "not-run",
+  "liveProductAPI": "not-run; zero calls in QA"
+}

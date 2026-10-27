@@ -1,0 +1,204 @@
+{
+  "schema": 1,
+  "source": "3557a2ccd50cd3b4c3153afed9e4ec8c78106782",
+  "utils": "2.3.0",
+  "vectors": [
+    {
+      "query": "happy",
+      "raw": "https://api.datamuse.com/words?qe=ml&md=d&ml=happy",
+      "url": "https://api.datamuse.com/words?qe=ml&md=d&ml=happy"
+    },
+    {
+      "query": "a b  c",
+      "raw": "https://api.datamuse.com/words?qe=ml&md=d&ml=a+b++c",
+      "url": "https://api.datamuse.com/words?qe=ml&md=d&ml=a+b++c"
+    },
+    {
+      "query": "?a*",
+      "raw": "https://api.datamuse.com/words?qe=ml&md=d&ml=?a*",
+      "url": "https://api.datamuse.com/words?qe=ml&md=d&ml=?a*"
+    },
+    {
+      "query": "hot&max=2",
+      "raw": "https://api.datamuse.com/words?qe=ml&md=d&ml=hot&max=2",
+      "url": "https://api.datamuse.com/words?qe=ml&md=d&ml=hot&max=2"
+    },
+    {
+      "query": "a+b",
+      "raw": "https://api.datamuse.com/words?qe=ml&md=d&ml=a+b",
+      "url": "https://api.datamuse.com/words?qe=ml&md=d&ml=a+b"
+    },
+    {
+      "query": "%20",
+      "raw": "https://api.datamuse.com/words?qe=ml&md=d&ml=%20",
+      "url": "https://api.datamuse.com/words?qe=ml&md=d&ml=%20"
+    },
+    {
+      "query": "a#ignored",
+      "raw": "https://api.datamuse.com/words?qe=ml&md=d&ml=a#ignored",
+      "url": "https://api.datamuse.com/words?qe=ml&md=d&ml=a#ignored"
+    },
+    {
+      "query": " café 😀",
+      "raw": "https://api.datamuse.com/words?qe=ml&md=d&ml=+café+😀",
+      "url": "https://api.datamuse.com/words?qe=ml&md=d&ml=+caf%C3%A9+%F0%9F%98%80"
+    },
+    {
+      "query": "\ta\nb\rc",
+      "raw": "https://api.datamuse.com/words?qe=ml&md=d&ml=\ta\nb\rc",
+      "url": "https://api.datamuse.com/words?qe=ml&md=d&ml=abc"
+    },
+    {
+      "query": "x\u0000y",
+      "raw": "https://api.datamuse.com/words?qe=ml&md=d&ml=x\u0000y",
+      "url": "https://api.datamuse.com/words?qe=ml&md=d&ml=x%00y"
+    },
+    {
+      "query": "O'Reilly",
+      "raw": "https://api.datamuse.com/words?qe=ml&md=d&ml=O'Reilly",
+      "url": "https://api.datamuse.com/words?qe=ml&md=d&ml=O%27Reilly"
+    },
+    {
+      "query": " ",
+      "raw": "https://api.datamuse.com/words?qe=ml&md=d&ml=+",
+      "url": "https://api.datamuse.com/words?qe=ml&md=d&ml=+"
+    },
+    {
+      "query": "alpha=beta?x/y",
+      "raw": "https://api.datamuse.com/words?qe=ml&md=d&ml=alpha=beta?x/y",
+      "url": "https://api.datamuse.com/words?qe=ml&md=d&ml=alpha=beta?x/y"
+    }
+  ],
+  "words": [
+    {
+      "input": {
+        "word": "zebra",
+        "defs": [
+          "n\tfirst",
+          "prefix adj\tsecond n\tthird"
+        ],
+        "score": 1
+      },
+      "title": "zebra",
+      "subtitle": "n\tfirst",
+      "markdown": "# zebra\n---\n`n` first\n\nprefix `adj` second n\tthird"
+    },
+    {
+      "input": {
+        "word": "alpha",
+        "defs": [
+          "é\tnon-ASCII",
+          "_1\tunder"
+        ],
+        "score": 999
+      },
+      "title": "alpha",
+      "subtitle": "é\tnon-ASCII",
+      "markdown": "# alpha\n---\né\tnon-ASCII\n\n`_1` under"
+    },
+    {
+      "input": {
+        "word": "missing"
+      },
+      "title": "missing",
+      "subtitle": null,
+      "markdown": "# missing\n---\n"
+    },
+    {
+      "input": {
+        "word": "null",
+        "defs": null
+      },
+      "title": "null",
+      "subtitle": null,
+      "markdown": "# null\n---\n"
+    },
+    {
+      "input": {
+        "word": "empty",
+        "defs": []
+      },
+      "title": "empty",
+      "subtitle": null,
+      "markdown": "# empty\n---\n"
+    },
+    {
+      "input": {
+        "word": "blank",
+        "defs": [
+          "",
+          "v\ttail"
+        ]
+      },
+      "title": "blank",
+      "subtitle": null,
+      "markdown": "# blank\n---\n\n\n`v` tail"
+    }
+  ],
+  "mime": [
+    {
+      "value": "application/json",
+      "isJSON": true
+    },
+    {
+      "value": "application/json; charset=utf-8",
+      "isJSON": true
+    },
+    {
+      "value": "text/json",
+      "isJSON": true
+    },
+    {
+      "value": "application/problem+json",
+      "isJSON": true
+    },
+    {
+      "value": "application/vnd.json-test",
+      "isJSON": true
+    },
+    {
+      "value": "application/notjson",
+      "isJSON": false
+    },
+    {
+      "value": "text/html",
+      "isJSON": false
+    },
+    {
+      "value": "invalid",
+      "isJSON": false
+    },
+    {
+      "value": "APPLICATION/JSON",
+      "isJSON": true
+    },
+    {
+      "value": "application/jsonp",
+      "isJSON": false
+    },
+    {
+      "value": "text/x-json",
+      "isJSON": true
+    },
+    {
+      "value": "application/json+other",
+      "isJSON": true
+    },
+    {
+      "value": "application/json_extra",
+      "isJSON": false
+    }
+  ],
+  "checks": {
+    "emptyLaunch": true,
+    "exactRawURL": true,
+    "responseOrder": true,
+    "metadata": true,
+    "toggle": true,
+    "emptyClears": true,
+    "cacheScope": true,
+    "lateFetchABA": true,
+    "manualRetry": true,
+    "cachedFailure": true
+  }
+}

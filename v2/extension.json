@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 3,
+  "id": "com.tezbar.native.onelook-thesaurus",
+  "slug": "onelook-thesaurus",
+  "name": "OneLook Thesaurus",
+  "version": "0.1.0",
+  "description": "A powerful English thesaurus and brainstorming tool that lets you describe what you're looking for in plain terms.",
+  "icon": "resources/command-icon.png",
+  "author": "almatkai",
+  "runtime": "rust",
+  "execution": "process",
+  "protocolVersion": 1,
+  "repository": "https://github.com/almatkai/onelook-thesaurus",
+  "platforms": ["macOS", "Windows"],
+  "preferences": [],
+  "commands": [{
+    "name": "search",
+    "title": "Search",
+    "description": "Enter a word, phrase, description, or pattern above to find synonyms, related words, and more.",
+    "mode": "view",
+    "runtime": "rust",
+    "platforms": ["macOS", "Windows"],
+    "timeoutMs": 20000,
+    "concurrency": "serialize",
+    "refreshMs": null
+  }],
+  "replaces": ["com.tezbar.onelook-thesaurus", "raycast.onelook-thesaurus"],
+  "capabilities": [],
+  "artifacts": {},
+  "verification": [
+    {"platform": "macOS", "state": "not-run", "note": "Isolated ARM64 process/source/owned TLS QA only. No clean-profile host GUI acceptance or release installation."},
+    {"platform": "Windows", "state": "not-run", "note": "GNU checks attempted on macOS; MinGW compiler unavailable. No Windows execution/MSVC package/GUI acceptance."}
+  ]
+}

@@ -1,0 +1,240 @@
+[
+  {
+    "path": "fixtures/pinned/sdk/SDK_API.md",
+    "repository": "../tezbar-extension-sdk-rust",
+    "revision": "e955911f0bf5b558f9d3eb5183df0adc95c22af2",
+    "source": "SDK_API.md",
+    "sha256": "73945c65d763a82ee1bd64b2f30418f8aaec2e75966d71d7b774e7f7e40f098e"
+  },
+  {
+    "path": "fixtures/pinned/sdk/PROTOCOL.md",
+    "repository": "../tezbar-extension-sdk-rust",
+    "revision": "e955911f0bf5b558f9d3eb5183df0adc95c22af2",
+    "source": "PROTOCOL.md",
+    "sha256": "0bc474c2e79e6e3f46ad2d577f83144ad69bd87cb17b74600a17178bcc257371"
+  },
+  {
+    "path": "fixtures/pinned/sdk/HOST_INTEGRATION.md",
+    "repository": "../tezbar-extension-sdk-rust",
+    "revision": "e955911f0bf5b558f9d3eb5183df0adc95c22af2",
+    "source": "HOST_INTEGRATION.md",
+    "sha256": "88e6ca0c1090bcdf5d5501583e52e3eb7b0a369f4fea17ce4b01616c2f69d9a8"
+  },
+  {
+    "path": "fixtures/pinned/sdk/Cargo.toml",
+    "repository": "../tezbar-extension-sdk-rust",
+    "revision": "e955911f0bf5b558f9d3eb5183df0adc95c22af2",
+    "source": "Cargo.toml",
+    "sha256": "f3f6c5a49f92dced2ff7b8ea9c5942d826a8a6c3cdade67f62003ded86b506dd"
+  },
+  {
+    "path": "fixtures/pinned/sdk/src/runner.rs",
+    "repository": "../tezbar-extension-sdk-rust",
+    "revision": "e955911f0bf5b558f9d3eb5183df0adc95c22af2",
+    "source": "src/runner.rs",
+    "sha256": "975350f717db0a3bf9cac11e9efd733719d2148544c2e38d82758c92a0a88053"
+  },
+  {
+    "path": "fixtures/pinned/sdk/src/context.rs",
+    "repository": "../tezbar-extension-sdk-rust",
+    "revision": "e955911f0bf5b558f9d3eb5183df0adc95c22af2",
+    "source": "src/context.rs",
+    "sha256": "9d8498bf3799690703c0a4e70fed2c9356850cc0c4e35370104fd09898c09efa"
+  },
+  {
+    "path": "fixtures/pinned/sdk/src/lib.rs",
+    "repository": "../tezbar-extension-sdk-rust",
+    "revision": "e955911f0bf5b558f9d3eb5183df0adc95c22af2",
+    "source": "src/lib.rs",
+    "sha256": "7ffb2da74cfcf91f428453cf90594baa79b21251b7df77756348e0acda79cd16"
+  },
+  {
+    "path": "fixtures/pinned/sdk/LICENSE",
+    "repository": "../tezbar-extension-sdk-rust",
+    "revision": "e955911f0bf5b558f9d3eb5183df0adc95c22af2",
+    "source": "LICENSE",
+    "sha256": "0ed6b1b2760294d4aaaa45be38e166fcc0168e1dd5190423c096fcbe1c94afbf"
+  },
+  {
+    "path": "fixtures/pinned/sdk/NOTICE",
+    "repository": "../tezbar-extension-sdk-rust",
+    "revision": "e955911f0bf5b558f9d3eb5183df0adc95c22af2",
+    "source": "NOTICE",
+    "sha256": "aa04ab6115cfc2e2172b0613013611a59dc487c70f3e2dfbd2f135326d703c74"
+  },
+  {
+    "path": "fixtures/pinned/host/docs/EXTERNAL_RUST_EXTENSIONS.md",
+    "repository": "/Users/almat/Desktop/code/Tezbar APP/Tezbar",
+    "revision": "ea100cee3f69711de12485ba061950c5fc65258f",
+    "source": "docs/EXTERNAL_RUST_EXTENSIONS.md",
+    "sha256": "56da4ce632e1362ad56c380fa6d706a1f455ea44b67cd473b0b3eb216a9d5610"
+  },
+  {
+    "path": "fixtures/pinned/host/schemas/extension-v3.schema.json",
+    "repository": "/Users/almat/Desktop/code/Tezbar APP/Tezbar",
+    "revision": "ea100cee3f69711de12485ba061950c5fc65258f",
+    "source": "schemas/extension-v3.schema.json",
+    "sha256": "6f42f0316aa88097703496e828b11afcc7caecf8477fa7502df903c3ad2a8048"
+  },
+  {
+    "path": "fixtures/pinned/host/src/renderer/ExtensionRuntimeView.tsx",
+    "repository": "/Users/almat/Desktop/code/Tezbar APP/Tezbar",
+    "revision": "ea100cee3f69711de12485ba061950c5fc65258f",
+    "source": "src/renderer/ExtensionRuntimeView.tsx",
+    "sha256": "c8378d1a1cc91cf622f81dc1bd88ed986ea2e9c396f7ff497e649171f573c5e8"
+  },
+  {
+    "path": "fixtures/pinned/host/src/shared/extensionRuntime.ts",
+    "repository": "/Users/almat/Desktop/code/Tezbar APP/Tezbar",
+    "revision": "ea100cee3f69711de12485ba061950c5fc65258f",
+    "source": "src/shared/extensionRuntime.ts",
+    "sha256": "47a290032a9967e2dee5142030b4ef8cfc5237a79521aa535f8a12d8c16deda4"
+  },
+  {
+    "path": "fixtures/pinned/host/src-tauri/src/native_core/extensions/process_host.rs",
+    "repository": "/Users/almat/Desktop/code/Tezbar APP/Tezbar",
+    "revision": "ea100cee3f69711de12485ba061950c5fc65258f",
+    "source": "src-tauri/src/native_core/extensions/process_host.rs",
+    "sha256": "daf45815d76762323c6c1320c88ed24dfe28160a60bb4974b8073e3f17a3b982"
+  },
+  {
+    "path": "fixtures/pinned/host/src-tauri/src/native_core/extensions/registry.rs",
+    "repository": "/Users/almat/Desktop/code/Tezbar APP/Tezbar",
+    "revision": "ea100cee3f69711de12485ba061950c5fc65258f",
+    "source": "src-tauri/src/native_core/extensions/registry.rs",
+    "sha256": "05dd5d9c5fafbac3034e9ba5e101e345a5d3bb658a49d22696e59ea924530e66"
+  },
+  {
+    "path": "fixtures/pinned/host/src-tauri/src/native_core/extensions/process.rs",
+    "repository": "/Users/almat/Desktop/code/Tezbar APP/Tezbar",
+    "revision": "ea100cee3f69711de12485ba061950c5fc65258f",
+    "source": "src-tauri/src/native_core/extensions/process.rs",
+    "sha256": "eb51da47a912c2a364eff16874b584ee0a2a4b571968ac17fd5056715a2c3d18"
+  },
+  {
+    "path": "fixtures/pinned/host/LICENSE",
+    "repository": "/Users/almat/Desktop/code/Tezbar APP/Tezbar",
+    "revision": "ea100cee3f69711de12485ba061950c5fc65258f",
+    "source": "LICENSE",
+    "sha256": "0ed6b1b2760294d4aaaa45be38e166fcc0168e1dd5190423c096fcbe1c94afbf"
+  },
+  {
+    "path": "fixtures/pinned/original/.eslintrc.json",
+    "repository": ".",
+    "revision": "3557a2ccd50cd3b4c3153afed9e4ec8c78106782",
+    "source": ".eslintrc.json",
+    "sha256": "739c28ed0495cec767903956a808561ca22d332ecb214ce609d63a82b678d516"
+  },
+  {
+    "path": "fixtures/pinned/original/.gitignore",
+    "repository": ".",
+    "revision": "3557a2ccd50cd3b4c3153afed9e4ec8c78106782",
+    "source": ".gitignore",
+    "sha256": "b027adcbb6131ef49be335e9a699657351ca3d5bb2b474379634d1714f5a585b"
+  },
+  {
+    "path": "fixtures/pinned/original/CHANGELOG.md",
+    "repository": ".",
+    "revision": "3557a2ccd50cd3b4c3153afed9e4ec8c78106782",
+    "source": "CHANGELOG.md",
+    "sha256": "79ee33a350e1a20187aa21790b29897573e16bc0bd955a4a7610083218a18774"
+  },
+  {
+    "path": "fixtures/pinned/original/LICENSE",
+    "repository": ".",
+    "revision": "3557a2ccd50cd3b4c3153afed9e4ec8c78106782",
+    "source": "LICENSE",
+    "sha256": "1d7dbdbcd4fe14dfa08334fab20bffad23c1290f195792a3a4420dadf9912f81"
+  },
+  {
+    "path": "fixtures/pinned/original/README.md",
+    "repository": ".",
+    "revision": "3557a2ccd50cd3b4c3153afed9e4ec8c78106782",
+    "source": "README.md",
+    "sha256": "1a4e07eeef08de23c08709505d83ce01baee0533959cfc9f73a45f3fb1a72985"
+  },
+  {
+    "path": "fixtures/pinned/original/package-lock.json",
+    "repository": ".",
+    "revision": "3557a2ccd50cd3b4c3153afed9e4ec8c78106782",
+    "source": "package-lock.json",
+    "sha256": "ee2155b2081fdc4775739c945da763579681d54d637ef84ed190c2c4ef240a7b"
+  },
+  {
+    "path": "fixtures/pinned/original/package.json",
+    "repository": ".",
+    "revision": "3557a2ccd50cd3b4c3153afed9e4ec8c78106782",
+    "source": "package.json",
+    "sha256": "4a22138c16f05ae9cd9d037ecc30aad88bfbdace5385587855a589cb23b806f5"
+  },
+  {
+    "path": "fixtures/pinned/original/raycast-env.d.ts",
+    "repository": ".",
+    "revision": "3557a2ccd50cd3b4c3153afed9e4ec8c78106782",
+    "source": "raycast-env.d.ts",
+    "sha256": "48665d2d592929cab18672175ac1f07ac8bd6c9b6e754fef7f54b0a6d09f075c"
+  },
+  {
+    "path": "fixtures/pinned/original/src/search.tsx",
+    "repository": ".",
+    "revision": "3557a2ccd50cd3b4c3153afed9e4ec8c78106782",
+    "source": "src/search.tsx",
+    "sha256": "ffa83df05e98c31283fe7392795194a29fdae93621a062193bca3dba415a7a7a"
+  },
+  {
+    "path": "fixtures/pinned/original/test/smoke.test.ts",
+    "repository": ".",
+    "revision": "3557a2ccd50cd3b4c3153afed9e4ec8c78106782",
+    "source": "test/smoke.test.ts",
+    "sha256": "2a345b221c85f0ebe69ed6f83ebc97571047e24fe93161a5b24bde7ae3a962de"
+  },
+  {
+    "path": "fixtures/pinned/original/tsconfig.json",
+    "repository": ".",
+    "revision": "3557a2ccd50cd3b4c3153afed9e4ec8c78106782",
+    "source": "tsconfig.json",
+    "sha256": "3f734c2d4726ab882b39a4dcff5a35660d510c2a4ff23d51ebea59f6dea9ed28"
+  },
+  {
+    "path": "resources/command-icon.png",
+    "url": "https://raw.githubusercontent.com/raycast/extensions/6734d85992290066fd31a7f5bee3cca3d3545a1a/extensions/onelook-thesaurus/assets/command-icon.png",
+    "sha256": "0723e3c35808ff5ff0aff5fe2dc81db4c4615b013e02d7b35406b29bb096d032",
+    "bytes": 141818,
+    "comparedTo": "assets/command-icon.png"
+  },
+  {
+    "path": "fixtures/pinned/host/src/renderer/src/raycast-api/list-runtime.tsx",
+    "repository": "/Users/almat/Desktop/code/Tezbar APP/Tezbar",
+    "revision": "ea100cee3f69711de12485ba061950c5fc65258f",
+    "source": "src/renderer/src/raycast-api/list-runtime.tsx",
+    "sha256": "c7e253c34ce6e0a5132cab96bf1f0388393faca79ff57c3fdc7956f377a0ab0f"
+  },
+  {
+    "path": "fixtures/pinned/host/src/renderer/src/raycast-api/index.tsx",
+    "repository": "/Users/almat/Desktop/code/Tezbar APP/Tezbar",
+    "revision": "ea100cee3f69711de12485ba061950c5fc65258f",
+    "source": "src/renderer/src/raycast-api/index.tsx",
+    "sha256": "7fc8413a72b92e8f88b0939cd93f91624018fe0765baa1e71b38b86f8cc77a64"
+  },
+  {
+    "path": "fixtures/pinned/host/src/renderer/src/raycast-api/detail-runtime.tsx",
+    "repository": "/Users/almat/Desktop/code/Tezbar APP/Tezbar",
+    "revision": "ea100cee3f69711de12485ba061950c5fc65258f",
+    "source": "src/renderer/src/raycast-api/detail-runtime.tsx",
+    "sha256": "32eecb50891e0f282bd3d78d8a38193ec24540bf70c3fdc8e43a1d368c97d54c"
+  },
+  {
+    "path": "fixtures/pinned/host/src/renderer/ui/Markdown.tsx",
+    "repository": "/Users/almat/Desktop/code/Tezbar APP/Tezbar",
+    "revision": "ea100cee3f69711de12485ba061950c5fc65258f",
+    "source": "src/renderer/ui/Markdown.tsx",
+    "sha256": "d205312b35293a433d5398e4edf1dcc96662cacd34036e8ee3ec503f65eee2de"
+  },
+  {
+    "path": "fixtures/pinned/host/src-tauri/src/native_core/extensions/native.rs",
+    "repository": "/Users/almat/Desktop/code/Tezbar APP/Tezbar",
+    "revision": "ea100cee3f69711de12485ba061950c5fc65258f",
+    "source": "src-tauri/src/native_core/extensions/native.rs",
+    "sha256": "f11d1f436fa5f9b045a7ac25f3516adb0efc6d4c12ce1f0f0c4768940fafe16f"
+  }
+]

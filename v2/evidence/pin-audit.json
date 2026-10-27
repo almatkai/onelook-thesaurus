@@ -1,0 +1,14 @@
+{
+  "pinnedFilesAndLibrarySources": 44,
+  "derivedHostFunctions": 2,
+  "V1UnchangedExceptReadme": true,
+  "cargoPackages": 139,
+  "declaredMSRVOver185": [],
+  "immutableSDK": "e955911f0bf5b558f9d3eb5183df0adc95c22af2",
+  "immutableHost": "ea100cee3f69711de12485ba061950c5fc65258f",
+  "independentNetworkInputs": [
+    "upstream original icon",
+    "SRI-verified locked utils tarball"
+  ],
+  "liveProductAPICalls": 0
+}

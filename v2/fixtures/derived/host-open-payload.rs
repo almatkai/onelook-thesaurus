@@ -1,0 +1,1 @@
+json!({"sessionId":id,"commandName":command,"preferences":preferences,"argumentValues":body["argumentValues"].as_object().cloned().unwrap_or_default(),"searchText":body["searchText"],"launchContext":body["launchContext"]})

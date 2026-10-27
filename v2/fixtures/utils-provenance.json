@@ -1,0 +1,59 @@
+{
+  "resolved": "https://registry.npmjs.org/@raycast/utils/-/utils-2.3.0.tgz",
+  "integrity": "sha512-997ANn0aaYBZjlAb94d8qXLXPRGxFen86741ZkTEKwpXosq/GaRlfKzw/T09v0/CzYUjiqT0LhU5VXQ4DeGc+A==",
+  "archiveSha256": "f9abac32c1de426bc65bf49ba5d68376bff57bb3266bd906a13ce584ba1a8d17",
+  "sourceMapMember": "package/dist/main.js.map",
+  "sourceMapSha256": "a241f814697fd5811bbce697b7a1448215db499edaa3aec52feb2b2a91947f52",
+  "sources": [
+    {
+      "path": "fixtures/pinned/utils/usePromise.ts",
+      "source": "src/usePromise.ts",
+      "sha256": "64f01f2b0ea2d8f0ea83cac426cffce00cdf1745fbd57e0da3a1d4df9f625bf5"
+    },
+    {
+      "path": "fixtures/pinned/utils/useDeepMemo.ts",
+      "source": "src/useDeepMemo.ts",
+      "sha256": "570a4cdcb8c98b68d82711219b0e0a19be419018c72ad09785e42d4dea60be39"
+    },
+    {
+      "path": "fixtures/pinned/utils/useLatest.ts",
+      "source": "src/useLatest.ts",
+      "sha256": "d36ce0cacb31b08dd6b31b4b2e718f0d31b4d2eba160d713dc1b250ab2b02c2b"
+    },
+    {
+      "path": "fixtures/pinned/utils/showFailureToast.ts",
+      "source": "src/showFailureToast.ts",
+      "sha256": "7a4e028b1e95a58c47c69848d57e10ed631e92d117f18de10041482bedf22e8b"
+    },
+    {
+      "path": "fixtures/pinned/utils/useCachedState.ts",
+      "source": "src/useCachedState.ts",
+      "sha256": "93791b22296df503318bd61ab0954826de33438e685ce55d09c9e2c3f9434b44"
+    },
+    {
+      "path": "fixtures/pinned/utils/helpers.ts",
+      "source": "src/helpers.ts",
+      "sha256": "dc3a7bb850613dcaedf768c17465248ae52aebd56d9fe6a3f299e49de9dac0dd"
+    },
+    {
+      "path": "fixtures/pinned/utils/type-hasher.ts",
+      "source": "src/vendors/type-hasher.ts",
+      "sha256": "6fc40d865366cbde7f99385f34e596fe50897d64967a737832b58b55225e47c7"
+    },
+    {
+      "path": "fixtures/pinned/utils/useCachedPromise.ts",
+      "source": "src/useCachedPromise.ts",
+      "sha256": "a7d0e94ee020726c689fcc67dfcbc7f003ff4269577397563c591febcedfc1d5"
+    },
+    {
+      "path": "fixtures/pinned/utils/useFetch.ts",
+      "source": "src/useFetch.ts",
+      "sha256": "d6e0adb3be8f3859e0664d023e0d27bf7bf0b16889678c02c325cc9077d84830"
+    },
+    {
+      "path": "fixtures/pinned/utils/fetch-utils.ts",
+      "source": "src/fetch-utils.ts",
+      "sha256": "2d0063c8ae4416d2e71d8572fad8ec26aefe984433cdca4c2b1cea02242218be"
+    }
+  ]
+}

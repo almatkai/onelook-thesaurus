@@ -1,0 +1,188 @@
+--- a/src/renderer/src/raycast-api/list-runtime.tsx
++++ b/src/renderer/src/raycast-api/list-runtime.tsx
+@@ -510,6 +510,7 @@
+   )
+   const hasServerSearch = onSearchTextChanged !== undefined && root.props?.__hasServerSearch === true
+   const hasMore = root.props?.__hasMore === true
++  const isLoading = root.props?.isLoading === true
+   const isColorConversionSurface = isColorConversionCommand(commandName, title, navigationTitle)
+   const hasManySearchOptions = (searchAccessory?.options.length ?? 0) > 4
+   const hasSearchPlaceholder =
+@@ -559,7 +560,8 @@
+   }, [searchAccessory])
+ 
+   useEffect(() => {
+-    if (query === lastSentQuery.current) return
++    // Server search is dispatched by the input event, before any debounce.
++    if (hasServerSearch || query === lastSentQuery.current) return
+     if (debounceTimer.current) {
+       clearTimeout(debounceTimer.current)
+     }
+@@ -572,7 +574,7 @@
+         clearTimeout(debounceTimer.current)
+       }
+     }
+-  }, [query, onSearchTextChanged])
++  }, [query, onSearchTextChanged, hasServerSearch])
+ 
+   const colorConversionRows = useMemo<ListRow[]>(() => {
+     if (!isColorConversionSurface) return []
+@@ -694,14 +696,14 @@
+       ? 'No color formats'
+       : 'Enter a color'
+     : hasQuery
+-      ? 'No matching applications'
++      ? emptyView?.title || 'No matching applications'
+       : emptyView?.title || 'No list items'
+   const emptyDescription = isColorConversionSurface
+     ? hasQuery
+       ? 'Try HEX, RGB, RGBA, HSL, or HSLA.'
+       : 'Type a color value to convert it.'
+     : hasQuery
+-      ? 'Try a different app name or keyword.'
++      ? emptyView?.description || 'Try a different app name or keyword.'
+       : emptyView?.description || ''
+ 
+   return (
+@@ -720,8 +722,13 @@
+                 type="text"
+                 value={query}
+                 onChange={(event) => {
+-                  setQuery(event.target.value)
++                  const draft = event.target.value
++                  setQuery(draft)
+                   setSelected(0)
++                  if (hasServerSearch) {
++                    lastSentQuery.current = draft
++                    void onSearchTextChanged(draft)
++                  }
+                 }}
+                 placeholder={searchBarPlaceholder}
+                 className="h-8 w-full rounded-tezbar-chip border border-white/10 bg-white/[0.04] px-2.5 text-[12px] text-ink-1 placeholder:text-ink-4 outline-none transition focus:border-white/20 focus:bg-white/[0.06]"
+@@ -860,7 +867,7 @@
+ 
+       <div className="glass-card flex shrink-0 items-center justify-between gap-3 px-4 py-2 animate-tezbar-scale-in">
+         <span className="flex items-center gap-2 text-[11px] font-medium text-ink-4">
+-          {filteredRows.length} item{filteredRows.length === 1 ? '' : 's'}
++          {isLoading ? 'Loading… · ' : ''}{filteredRows.length} item{filteredRows.length === 1 ? '' : 's'}
+           {hasMore ? (
+             <button
+               type="button"
+--- a/src/renderer/ExtensionRuntimeView.tsx
++++ b/src/renderer/ExtensionRuntimeView.tsx
+@@ -427,6 +427,7 @@
+   const [error, setError] = useState<string | null>(null)
+   const [actionNotice, setActionNotice] = useState<ActionNotice | null>(null)
+   const searchRequestSeq = useRef(0)
++  const [searchPending, setSearchPending] = useState(false)
+   const currentSession = useRef<string | null>(null)
+   const sessionOwner = `${state.sessionId}:${state.generation ?? ''}`
+   currentSession.current = sessionOwner
+@@ -469,6 +470,7 @@
+     searchRequestSeq.current += 1
+     setState(fromRunResult(initial))
+     setError(null)
++    setSearchPending(false)
+   }, [initial])
+ 
+   useEffect(
+@@ -507,9 +509,10 @@
+       subscribe: window.tezbar.onExtensionSessionInvalidated,
+       subscribeVisibility: window.tezbar.onWindowVisibility,
+       refresh: async () => {
++        const requestSeq = searchRequestSeq.current
+         try {
+           const result = await window.tezbar.extensionRefreshSession({ sessionId: state.sessionId })
+-          if (cancelled || (result.ok && result.mode === 'unchanged')) return
++          if (requestSeq !== searchRequestSeq.current || cancelled || (result.ok && result.mode === 'unchanged')) return
+           if (!result.ok) {
+             setError(result.message)
+             return
+@@ -521,7 +524,7 @@
+           if (result.sessionId !== state.sessionId || result.generation !== state.generation) return
+           setState(fromRunResult(result))
+         } catch (error) {
+-          if (!cancelled) setError(error instanceof Error ? error.message : String(error))
++          if (!cancelled && requestSeq === searchRequestSeq.current && currentSession.current === sessionOwner) setError(error instanceof Error ? error.message : String(error))
+         }
+       },
+     })
+@@ -536,11 +539,23 @@
+       const requestSeq = searchRequestSeq.current + 1
+       searchRequestSeq.current = requestSeq
+       console.log(`[RuntimeView] Search text changed, sending to sandbox: "${searchText}"`)
+-      const result = await window.tezbar.extensionSearchTextChanged({
++      setError(null)
++      setSearchPending(true)
++      let result
++      try {
++        result = await window.tezbar.extensionSearchTextChanged({
+         sessionId: state.sessionId,
+         searchText,
+-      })
++        })
++      } catch (error) {
++        if (requestSeq === searchRequestSeq.current && currentSession.current === sessionOwner) {
++          setError(error instanceof Error ? error.message : String(error))
++          setSearchPending(false)
++        }
++        return
++      }
+       if (requestSeq !== searchRequestSeq.current || currentSession.current !== sessionOwner) return
++      setSearchPending(false)
+ 
+       if (!result.ok) {
+         console.error('[RuntimeView] Search failed:', result.message)
+@@ -573,8 +588,9 @@
+   )
+ 
+   const handleLoadMore = useCallback(async () => {
++    const requestSeq = searchRequestSeq.current
+     const result = await window.tezbar.extensionLoadMore({ sessionId: state.sessionId })
+-    if (currentSession.current !== sessionOwner) return
++    if (requestSeq !== searchRequestSeq.current || currentSession.current !== sessionOwner) return
+     if (result.ok && result.mode === 'unchanged') return
+     if (!result.ok) {
+       setError(result.message)
+@@ -619,13 +635,14 @@
+             title={state.title}
+             extensionId={state.extensionId}
+             commandName={state.commandName}
+-            root={state.root}
++            root={{ ...state.root, props: { ...state.root.props, isLoading: searchPending || state.root.props?.isLoading === true } }}
+             actions={state.actions}
+             actionNotice={actionNotice}
+             onBack={onBack}
+             onSearchTextChanged={handleSearchTextChanged}
+             onLoadMore={handleLoadMore}
+             onInvokeAction={async (actionId, formValues) => {
++              const requestSeq = searchRequestSeq.current
+               setError(null)
+               const invokedAction = state.actions.find((action) => action.id === actionId)
+               if (isFormSurface && invokedAction?.kind === 'submit-form') {
+@@ -637,13 +654,14 @@
+                 formValues,
+               })
+ 
+-              if (currentSession.current !== sessionOwner) return
++              if (requestSeq !== searchRequestSeq.current || currentSession.current !== sessionOwner) return
+               if (!result.ok) {
+                 setError(result.message)
+                 showActionFailure(result.message)
+                 return
+               }
+ 
++              if (result.mode === 'unchanged') return
+               const effectNoticeValue = effectNotice(result.effects)
+               const messageNotice = result.message?.trim()
+                 ? {
+--- a/src/shared/extensionRuntime.ts
++++ b/src/shared/extensionRuntime.ts
+@@ -116,6 +116,7 @@
+ }
+ 
+ export type ExtensionInvokeActionResult =
++  | { ok: true; mode: 'unchanged' }
+   | {
+       ok: true
+       mode: 'no-view'

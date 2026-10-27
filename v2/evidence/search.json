@@ -1,0 +1,14 @@
+{
+  "canonicalRoot": "/Users/almat/Desktop/code/Tezbar APP/rust-extension-ports/onelook-thesaurus",
+  "canonicalPrefix": "ax-d6d7c46f0a53",
+  "stateDirectory": "v2/.qa/xerj/ax-d6d7c46f0a53",
+  "initial": "generation 1 committed; all 3 original code files indexed; 3 non-code files skipped",
+  "finalUpdate": "aborted: frozen dataset cannot accept new v2/Cargo.toml docs-family fields; unsupported schema evolution",
+  "completeForRustPort": false,
+  "prefixBypass": false,
+  "restart": false,
+  "schemaChange": false,
+  "fallback": "full original source, locked utils source-map closure, exact pinned Git objects, rg and independent hashes",
+  "initialLogSha256": "065658c07c31422d8da5eddae27b0dc993ee1152345a413632d7ace78cefb191",
+  "finalLogSha256": "f86237a866b063a7cb7e05fe6f2c9199c938a59f5d23b43ab068b200a1ae3578"
+}

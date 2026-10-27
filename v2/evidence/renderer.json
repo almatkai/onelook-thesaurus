@@ -1,0 +1,18 @@
+{
+  "checks": [
+    "baseline reproduced: server input ownership waits behind debounce",
+    "patched synchronous A/B/A revisions reject same-text old A and late B; pending indicator follows current request",
+    "invalid intermediate and empty draft fence old errors",
+    "current failure visible; successful next search clears old error",
+    "pending action result cannot overwrite edited draft; source has no dropdown options",
+    "unchanged stale action preserves current view",
+    "rejected search promise becomes recoverable visible error",
+    "cross-session response cannot restore prior draft"
+  ],
+  "count": 8,
+  "pinnedHost": "ea100cee3f69711de12485ba061950c5fc65258f",
+  "patchAppliedToHost": false,
+  "actualFunctions": true,
+  "ownedProducers": true,
+  "GUI": false
+}
